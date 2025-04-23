@@ -28,6 +28,12 @@ body {
   color: #2d2d2d;
 }
 
+
+:root {
+  --color-highlight: #ffc845;
+  --color-text-light: #ffffff;
+}
+
 .container {
     margin-top: 100px;
   width: 100%;
@@ -68,6 +74,17 @@ h1 {
   /* font-size: 1rem; */
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+.content .highlight {
+    background-color: var(--color-highlight);
+    color: var(--color-text-light); /* White text on highlight */
+    padding: 5px 50px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    display: inline-block; /* Allows padding and background */
+    text-decoration: none;
+
 }
 
 .tags {
@@ -124,7 +141,7 @@ h1 {
     <!-- Menu Navbar with Logo and Hamburger Icon -->
     <header id="main-header">
         <div class="row">
-            <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none;"><h3>mhoo__ping</h3></a></div>
+            <div class="column"><a href="index.html" onclick="off()"  style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
             <div class="column">...</div>
             <div class="column" onclick="on()"><h3>
               <div class="flip-text">
@@ -205,8 +222,11 @@ h1 {
       <p>
         Explaining Motion Graphic
 
-        I had the opportunity to work on a freelance project for Caple, producing the explaining graphic on how to build the SASO sink step-by-step.      </p>
-
+        I had the opportunity to work on a freelance project
+        for Caple, producing the explaining graphic
+        on how to build the SASO sink step-by-step.
+        <span class="highlight motion" ><a href="" style="text-decoration: none; color: #232323">Visit full video </a></span>
+      </p>
       <div class="tags">
         <span class="tag">Cinema4D</span>
         <span class="tag">Octane Render</span>
@@ -222,6 +242,20 @@ h1 {
     </div>
   </div>
 
+
+   <!-- Footer -->
+ <footer>
+  <div class="row">
+    <div class="column"><a href="index.html" style="color: rgb(255, 255, 255);text-decoration: none;">2025 &copy; mhoo_ping</a></div>
+    <div class="column">..</div>
+    <div class="column" >
+      <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: rgb(255, 255, 255);text-decoration: none;">Instagram</a>  &ThickSpace;
+      <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: rgb(255, 255, 255);text-decoration: none;">LinkedIn</a> 
+
+
+    
+    </div>
+</footer>
 </body>
 </html>
 
