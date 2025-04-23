@@ -1,0 +1,47 @@
+
+.fadein-title {
+  color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+    width: 100vh;
+    /* border: 10px solid red; */
+    /* font-size: 10rem; */
+  /* letter-spacing: -0.1em; less space between letters */
+  }
+
+  .letter-fadein {
+    display: inline-block;
+  
+    opacity: 0;
+    transform: translateY(190px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .letter-fadein.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+  
+@media (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  /* .fadein-title{
+    font-size: 8rem;
+  } */
+}
+
+@media (max-width: 700px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  /* .fadein-title{
+    font-size: 5rem;
+  } */
+}
+
+

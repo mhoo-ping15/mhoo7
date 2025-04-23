@@ -1,0 +1,556 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* "Funnel Display", sans-serif */
+/* "Space Grotesk", sans-serif */
+
+/* ::-webkit-scrollbar{width:0px;height:0px;}
+::-webkit-scrollbar-button{width:0px;height:0px;} */
+body, html {
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none; 
+}
+
+
+/* ============ Reset Default Styles============  */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { 
+        scroll-behavior: smooth; /* Smooth scrolling added here */
+        /* scroll-snap-type: y mandatory; */
+        background-color: #ffffff;
+        overflow-x: hidden;
+    }
+
+     body { 
+        
+        font-family: "Funnel Display", sans-serif; 
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-x: clip !important;
+    }
+
+
+/* h1{
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal; 
+} */
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  h2{
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  h4{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+p{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.column-experience h4{
+  font-size: 2rem;
+    font-weight: bold;
+    color: #353222;
+}
+
+/*============ Full-Height Sections ============ */
+        #home{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+           
+        }
+        #about{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+            overflow: hidden;
+        }
+        #story{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+          
+        }
+
+
+        
+        #experience{
+            height: 70vh;
+            display: flex;
+            color: #ffffff;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            scroll-snap-align: start;
+        }
+
+        @media screen and (max-width:1200px){
+          #experience{
+            height: auto;
+            min-height: 100vh;
+          }
+        }
+
+
+        @media screen and (max-width:700px){
+          #experience{
+            height: auto;
+            min-height: 100vh;
+          }
+        }
+
+        
+
+        #contact{
+            height: 100vh;
+            display: flex;
+            color: #020202;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+
+        #home { background: #dad943; }
+        #about { background: #232323; }
+        #story{ background: #EFE1CE; }
+        #experience { background: #232323; }
+        #contact { background: #232323; }
+
+
+/* ========================================================================== */
+
+
+header h3,
+.flip-text span {
+    transition: color 1s ease;
+}
+
+ /*============ Video home section ============ */
+ #home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: url('asset/images/sticker/smile sticker_v01.png'), auto;
+}
+
+/*==================== myreel section ========================== */
+#myreel {
+  height: 100vh;
+  width: 100vw;
+  background: #dad943;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#myreel video {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: 1500px;
+  object-fit: contain;
+   border-radius: 10px;
+}
+
+/*====================story section========================== */
+
+.overlay-story {
+    position: absolute;
+
+    z-index: 1;
+}
+
+/*============================================== */
+
+.overlay-text {
+    position: absolute;
+    /* top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%); */
+    font-size: 6vw;
+    font-weight: 700;
+    color: white;
+    text-align: left;
+    z-index: 1;
+
+    opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1.2s ease forwards;
+      animation-delay: 0.3s;
+     
+    
+}
+
+@keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+
+
+    @keyframes reveal {
+  from { opacity: 0; clip-path: inset(0% 60% 0% 50%); }
+  to { opacity: 1; clip-path: inset(0% 0% 0% 0%); }
+}
+
+@media screen and (max-width: 1400px){
+  .overlay-text {
+    font-size: 10vw;  
+    }
+}
+
+@media screen and (max-width: 700px){
+  .overlay-text {
+    margin: 20px;
+    font-size: 15vw;  
+    }
+}
+
+ /*============ story section ============ */
+
+.revealing-image {
+  animation: auto linear reveal both;
+  animation-timeline: view();
+  animation-range: entry 25% cover 50%;
+  width: 50vh;
+  height: 60vh;
+  object-fit: cover;
+   border-radius: 25px;
+   cursor: url('asset/images/sticker/smile sticker_v01.png'), auto;
+}
+
+
+ .overlay-about {
+    position: absolute;
+    top: 230%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 6;
+   
+}
+
+@media screen and (max-width: 800px) {
+  .revealing-image {
+  width: 30vh;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.overlay-about {
+    top: 235%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-weight: 600;
+  }
+}
+
+
+
+ /*============ story section ============ */
+ .ribbon {
+  width: auto;
+  font-size: 30px;
+  padding: 20px;
+  position: absolute;
+  left: -50px;
+  top: -50px;
+  text-align: center;
+  border-radius: 10px;
+  transform: rotate(-20deg);
+  background-color: #E56A54;
+  color: white;
+}
+
+.sticker01 {
+  position: absolute;
+  right: -60px;
+  top: -70px;
+  transform: rotate(20deg);
+}
+
+    .card {
+      background: #dad943;
+      padding: 30px 40px;
+      border-radius: 12px;
+      max-width: 400px;
+      /* width: 100%; */
+      right: 50px;
+      text-align: left;
+      position: relative;
+      transition: transform 0.3s ease-out;
+       transform: translateX(100%); /*Start off screen */
+    }
+
+   .card h2 {
+     margin-bottom: 10px;
+     font-size: 1.2rem;
+   }
+
+   .card p {
+     color: #414141;
+     font-size: 1.2rem;
+   }
+
+   @media screen and (max-width: 1200px) {
+  .card {
+     
+    right: 200px;
+      text-align: left;
+      position: relative;
+     
+    }
+  }
+ 
+
+   @media screen and (max-width: 700px) {
+    .ribbon {
+      
+      right: 100px;
+      top: -50px;
+      transform: rotate(-10deg);
+     }
+
+    .sticker01 {
+      position: absolute;
+      right: -10px;
+      top: -60px;
+      transform: rotate(10deg);
+    }
+  .card {
+     
+    right: 400px;
+      
+      text-align: left;
+      position: relative;
+     
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .ribbon {
+      
+      right: 100px;
+      top: -50px;
+      transform: rotate(-10deg);
+     }
+
+    .sticker01 {
+      position: absolute;
+      right: -30px;
+      top: -60px;
+      transform: rotate(10deg);
+    }
+  .card {
+     
+    right: 295px;
+      
+      text-align: left;
+      position: relative;
+     
+    }
+  }
+/*============ email sticker ============ */
+
+  .btn-email {
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  
+  color: white;
+  position: relative;
+}
+
+.email-sticker {
+  width: auto;
+  font-size: 25px;
+  padding: 12px 50px;
+  position: absolute;
+  right: 0px;
+  top: 200px;
+  text-align: center;
+  border-radius: 5px;
+  transform: rotate(5deg);
+  background-color: #ffc845;
+  color: #232323;
+}
+.email-sticker:hover{
+  border-radius: 5px;
+  transform: rotate(10deg);
+  background-color: #ffd278;
+}
+
+/*============ story section ============ */
+
+
+
+#story video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the section */
+    position: absolute;
+   
+}
+/*============ experience section ============ */
+
+
+#experience {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem;
+        /* min-height: 100vh; */
+      }
+
+      .row-experience {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+
+      .column-experience {
+        background: #dad943;
+        border-radius: 16px;
+        padding: 2rem;
+        /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+
+        /* fade in */
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 2s ease, transform 2s ease;
+      }
+
+      .column-experience.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+      .column-experience:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .experience-header {
+        font-size: 3rem;
+        color: #232323;
+        margin-bottom: 0.5rem;
+        transition: transform 0.6s ease;
+      }
+      .text h3{
+        font-size: 1.5rem;
+      }
+      .text h3,
+      .text p {
+        color: #232323;
+        margin: 0.5rem 0;
+        font-weight: 600;
+      }
+
+/* ↓ Switch to 2 columns on tablets and small laptops */
+@media screen and (max-width: 1200px) {
+  .row-experience {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+      /* Optional: Better spacing on small screens */
+      @media screen and  (max-width: 800px) {
+
+        .row-experience {
+    grid-template-columns: repeat(1, 1fr);
+  }
+        .experience-header {
+          font-size: 3rem;
+        }
+
+        .column-experience {
+          padding: 1.5rem;
+        }
+      }
+/* ======================================================= */
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotate-on-hover:hover {
+    animation: spin 5s linear infinite;
+    transform-origin: 50% 50%; /* Center of the SVG */
+  }
+/* ======================================================= */
+#mySVG {
+  position: relative;
+    bottom: 100px;
+    left: 0;
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    #animatedPath {
+     
+      fill: none;
+      stroke: #e77d7d;
+      stroke-width: 30;
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation: drawPath 5s ease forwards;
+    }
+
+    @keyframes drawPath {
+      to {
+        stroke-dashoffset: 0;
+        
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      svg {
+    bottom: 500;
+    left: 0;
+    }
+    }

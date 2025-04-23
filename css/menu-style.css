@@ -1,0 +1,193 @@
+
+/* ::-webkit-scrollbar{width:0px;height:0px;}
+::-webkit-scrollbar-button{width:0px;height:0px;} */
+
+body, html {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; 
+  }
+
+
+
+        /* ============ Reset Default Styles============  */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { 
+            scroll-behavior: smooth; /* Smooth scrolling added here */
+        }
+        body { 
+        font-family: "Funnel Display", sans-serif; 
+        /* background-color: #dad943; */
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+
+    }
+
+        /* ============ Menu Navbar with Logo and Hamburger Icon ============  */
+        header {
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Ensures the menu stays on top of other content */
+            
+            /* padding: 10px 0; */
+        }
+/* ====================================== */
+
+.menu-banner {
+ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* background: #dad943;  */
+   
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    z-index: -10;
+  }
+
+  .menu-banner.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+/* ====================================== */
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            padding: 10px 0;
+        }
+
+        .column {
+            text-align: center;
+            flex: 1;
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+            color: #ffffff; /* Adjust color if needed */
+            
+        }
+
+        /*============  Make the menu items clickable and centered ============ */
+        .flip-text {
+            cursor: pointer;
+           
+        }
+
+        /*============ ✨ OVERLAY STYLES ✨============  */
+
+
+/* Overlay-specific styles */
+#overlay header h3,
+#overlay .flip-text span {
+    color: #dad943 !important; /* Or whatever contrast color you want */
+}
+
+        #overlay {
+        
+            position: fixed;
+            display: none;  /* ❗ Hide by default */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #232323;
+            z-index: 2;
+            
+            color: #dad943;
+         
+              /* ✨ Fade effect setup */
+            opacity: 0;
+            /* transform: translateY(-50px); */
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            
+        }
+
+       /* ✨ Shown state for fade in */
+    #overlay.visible {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+   
+
+
+        #overlay a {
+        text-decoration: none; /* Remove underline */
+        color: #dad943; /* Set text color */
+        }
+        
+        #overlay.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #overlay nav {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center it */
+            text-align: center;
+            }
+
+        ul.nav-list {
+          cursor: url('asset/images/sticker/smile sticker_v01.svg'), auto;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 50px;
+            animation: fadeIn 1s ease-in forwards, flipIn 1s ease-out forwards; /*Add load animation */
+
+        }
+
+    /* @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    } */
+
+    @keyframes flipIn {
+      0% {
+        transform: translateY(5%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    } 
+
+        ul.nav-list:hover li:not(:hover) {
+            opacity: 0.2;
+        }
+
+
+       /*============ Footer ============ */
+       footer {
+        text-decoration: none;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        z-index: 900;
+         }
+
+                    

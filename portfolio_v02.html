@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itty-motion</title>
+    <link rel="icon" type="image/x-icon" href="asset/images/sticker/smile sticker_v01.svg">
+
+    <link rel="stylesheet" href="css/menu-style.css">
+     <link rel="stylesheet" href="css/flip-text.css">
+     <script src="script/menu-script.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============ Reset Default Styles============  */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { 
+            scroll-behavior: smooth; /* Smooth scrolling added here */
+        }
+        body { font-family: "Funnel Display", sans-serif; background-color: #dad943; }
+
+        /*============ Full-Height Sections ============ */
+        /* section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+       */
+
+
+
+
+ /*================== grid Motion section ======================== */
+ #motion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;  /* Allow the section to expand with content */
+    min-height: 100vh;  /* Minimum height of 100vh to ensure it still takes up the full screen */
+    width: 100%;
+    background: #EFE1CE;
+    overflow: hidden;  /* Prevent overflow of grid items */
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows of equal height */
+    gap: 10px;
+    width: 100%;
+    height: auto; /* Make the height auto so it adjusts based on grid items */
+    padding: 10px;
+   
+}
+
+/* Square grid items */
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #353222;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    aspect-ratio: 1; /* Ensures each grid item is square */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        grid-template-rows: repeat(8, 1fr); /* More rows */
+    }
+}
+
+@media (max-width: 780px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+        grid-template-rows: repeat(15, 1fr); /* Stack items */
+    }
+}
+/* ========================== Video section ============================================ */
+.grid-item video {
+    width: 100%;  /* Make video take up the full width of the grid item */
+    height: 100%; /* Make video take up the full height of the grid item */
+    object-fit: cover; /* Ensures the video covers the entire area without distortion */
+    border-radius: 15px; /* Optional, to match the rounded corners of the grid item */
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.grid-item img {
+    width: 100%;  /* Make video take up the full width of the grid item */
+    height: 100%; /* Make video take up the full height of the grid item */
+    object-fit: cover; /* Ensures the video covers the entire area without distortion */
+    border-radius: 15px; /* Optional, to match the rounded corners of the grid item */
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.grid-item a {
+    display: block; /* Makes the <a> tag a block-level element to fill the grid item */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Keeps the link above the video */
+}
+
+/* ========================== Overlay Text ============================================ */
+.middle {
+      transition: 0.5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .grid-item:hover video {
+    
+      opacity: 1;
+    }
+
+    .grid-item:hover .middle {
+      opacity: 1;
+    }
+
+    .text {
+      background-color: #dad943;
+      color: #353222;
+      font-size: 16px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      transition: .2s ease;
+    }
+
+    .text:hover{
+        transform: rotate(10deg);
+        
+    }
+
+    /* ========================================================================= */
+    .middle-sketch {
+      
+      position: absolute;
+      top: 10%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    
+    
+  .overlay-motion {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    z-index: 2;
+  }
+  
+  .grid-item:hover .overlay-motion {
+    opacity: 1;
+  }
+  
+  
+
+    </style>
+
+
+</head>
+<body>
+    <!-- Menu Navbar with Logo and Hamburger Icon -->
+    <header id="main-header">
+        <div class="row">
+            <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none;"><h3>mhoo__ping</h3></a></div>
+            <div class="column">..</div>
+            <div class="column" onclick="on()"><h3>
+              <div class="flip-text">
+                <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+                <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
+                <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+                <div class="letter-wrapper"><div class="letter-inner"><span>n</span><span>n</span></div></div>
+                <div class="letter-wrapper"><div class="letter-inner"><span>u</span><span>u</span></div></div>
+              </div>
+            </h3></div> 
+        </div>
+       
+        <!-- Overlay Menu -->
+        <div id="overlay">
+            <header class="row">
+                <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
+                <div class="column">..</div>
+                <div class="column" onclick="off()"><h3>
+                    <div class="flip-text">
+                      <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+                      <div class="letter-wrapper"><div class="letter-inner"><span>c</span><span>c</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>l</span><span>l</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>o</span><span>o</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>s</span><span>s</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+                    </div>  
+                  </h3></div>
+            </header>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" onclick="off()"><h2>home</h2></a></li>
+                    <li><a href="portfolio_v02.html" onclick="off()"><h2>portfolio</h2></a></li>
+                    <li><a href="motion_v01.html" onclick="off()"><h2>motion</h2></a></li>
+                    <li><a href="index.html#about" onclick="off()"><h2>about</h2></a></li>
+                    <li><a href="index.html#contact" onclick="off()"><h2>contact</h2></a></li>
+  
+                </ul>
+            </nav>
+  
+            <footer>
+                <div class="row">
+                <div class="column"><a href="index.html" style="color: beige;text-decoration: none;">2025 &copy; mhoo_ping</a></div>
+                <div class="column">..</div>
+                <div class="column" >
+                  <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: beige;text-decoration: none;">Instagram</a> &ThickSpace;
+                  <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: beige;text-decoration: none;">LinkedIn</a> 
+                            
+                </div>
+                
+            </footer>
+        </div>
+  
+        <div class="menu-banner" id="banner">
+          *
+           </div>
+    </header>
+  
+
+
+
+<section id="motion">
+    
+    <div class="grid-container">
+
+
+
+          <!-- ============ Holey & Moley showreal ============ -->
+          <div class="grid-item fade-item"><a href="">
+            <div class="overlay-motion"> <div class="middle"><div class="text">Holey & Moley showreel</div></div>
+            <img src="asset\Portfolio\Holey & Moley\Itthikorn-Duangchat-H&M-Showreel_v02.gif" alt="image">
+        </div>
+        
+            <img src="asset/Portfolio/Holey & Moley/Itty Reel-02.png" alt="image">
+
+           </a></div>
+
+           
+          <!-- ============ SASO SINK Installation ============ -->
+          <div class="grid-item fade-item"><a href="">
+            <div class="overlay-motion"> <div class="middle"><div class="text">SASO SINK Installation</div></div>
+            <img src="asset\Portfolio\Cable - Saso Sink\SASO-Installation_Mini-Reel.gif" alt="image">
+        </div>
+        
+            <img src="asset/Portfolio/Cable - Saso Sink/SASO-Installation_Mini-Reel cover.jpg" alt="image">
+
+           </a></div>
+              
+          <!-- ============ Re-design packaging ============ -->
+          <div class="grid-item fade-item"><a href="">
+            <div class="overlay-motion"> <div class="middle"><div class="text">Re-design packaging</div></div>
+            <img src="asset/Portfolio/Re-Design Packaging/re-design packagin cover.gif" alt="image">
+        </div>
+        
+            <img src="asset/Portfolio/Re-Design Packaging/Morrison-Packaging_Mockup_v01.jpg" alt="image">
+
+           </a></div>
+
+              <!-- ============ Inforgraphic ============ -->
+              <div class="grid-item fade-item">
+                <a href="">
+                    <img src="asset/Portfolio/Information Graphic/INFO_Pet Shop Boys_cover_v02.png" alt="Inforgraphic">
+                    <div class="middle"><div class="text">Inforgraphic</div></div>
+                </a>
+            </div>
+
+              <!-- =========== Little Boat Branding ============= -->
+              <div class="grid-item fade-item">
+                <a href="">
+                    <img src="asset/Portfolio/Little Boat/Little-Boat_Coffe-Cup_v01_sign.jpg" alt="Little Boat Branding">
+                    <div class="middle"><div class="text">Little Boat Branding</div></div>
+                </a>
+            </div>
+
+        <!-- ============ Kinetic Typography ============ -->
+        <div class="grid-item fade-item"><a href="kinetic-typography_v01.html">
+            <div class="overlay-motion"> <div class="middle"><div class="text">Kinetic Typography</div></div>
+            <img src="asset/Portfolio/Kinetic Typography/GIF/CAE_Good-Morning-Vietnam_v02_Scene-02.gif" alt="Kinetic Typography">
+        </div>
+
+            <img src="asset/Portfolio/Kinetic Typography/11--Get-rope-and-hang-me-01.jpg" alt="Kinetic Typography">
+
+        </a></div>
+
+            <!-- =========== Thai Station Branding ============= -->
+            <div class="grid-item fade-item">
+                <a href="">
+                    <img src="asset/Portfolio/Thai Station Branding/Thai-Station - Cover.jpg" alt="Thai Station Branding">
+                    <div class="middle"><div class="text">Thai Station Branding</div></div>
+                </a>
+            </div>
+           <!-- =========== Vanpress Branding ============= -->
+           <div class="grid-item fade-item">
+            <a href="">
+                <img src="asset/Portfolio/Atlas Megazine/ATLAS_Black Panther_Front cover_v01.jpg" alt="Atlas Megazine">
+                <div class="middle"><div class="text">Atlas Megazine</div></div>
+            </a>
+        </div>
+
+         <!-- =========== Vanpress Branding ============= -->
+         <div class="grid-item fade-item">
+            <a href="">
+                <img src="asset/Portfolio/Vanpress Branding/Hero_Banners/Vanpress_Logo_v01_cover.png" alt="Vanpress Branding">
+                <div class="middle"><div class="text">Vanpress Branding</div></div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+ <!-- Footer -->
+ <footer>
+    <div class="row">
+      <div class="column"><a href="index.html" style="color: rgb(255, 255, 255);text-decoration: none;">2025 &copy; mhoo_ping</a></div>
+      <div class="column">..</div>
+      <div class="column" >
+        <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: rgb(255, 255, 255);text-decoration: none;">Instagram</a>  &ThickSpace;
+        <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: rgb(255, 255, 255);text-decoration: none;">LinkedIn</a> 
+  
+  
+      
+      </div>
+  </footer>
+
+    <script>
+    </script>
+
+</body>
+</html>

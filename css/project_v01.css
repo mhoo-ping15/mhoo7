@@ -1,0 +1,315 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* "Funnel Display", sans-serif */
+/* "Space Grotesk", sans-serif */
+
+
+/* ============ Reset Default Styles============  */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { 
+        scroll-behavior: smooth; /* Smooth scrolling added here */
+        /* scroll-snap-type: y mandatory; */
+        overflow-x: hidden;
+        background-color: #efe1ce;
+    }
+
+     body { 
+        
+        font-family: "Funnel Display", sans-serif; 
+        background-color: #efe1ce;
+        margin: 0;
+        padding: 10px;
+        overflow-x: hidden;
+    }
+
+    h1{
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    
+      h2{
+        font-size: 4rem;
+        font-weight: bold;
+      }
+      
+    p{
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+
+/* ============================================================= */
+
+
+
+    .back-button{
+      text-align: center;
+      background: #dad943;
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 50px;
+      width: auto;
+      color: #232323;
+    }
+
+    section.box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 10px;
+      justify-items: center;
+      /* max-width: 1000px; */
+      margin: 0 auto;
+      padding-top: 10px;
+    }
+
+    .square-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      /* max-width: 450px; */
+      
+      background: #dddfcc;
+      border-radius: 15px;
+      
+    }
+
+    .square-box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; 
+      border-radius: 15px;
+      display: block;
+    }
+
+
+    .shot img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; 
+      border-radius: 15px;
+      display: block;
+      
+    }
+
+
+    .full-width01{
+     padding-top: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      border-radius: 15px;
+      display: block;
+    }
+  
+    
+  /* ======================================================= */
+
+    .dimension-display {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #232323;
+      /* background-color: #E2ED4B; */
+      padding: 5px 10px;
+      border-radius: 5px;
+      z-index: 9999;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .dimension-display {
+      top: 10px;
+    }
+
+    .cursor-display {
+      bottom: 10px;
+    }
+
+  /* ======================================================= */
+
+
+  .grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu menu main main main right';
+  gap: 10px;
+  /* background-color: white; */
+  padding: 10px;
+  
+}
+
+.grid-container > div {
+  padding: 20px;
+  font-size: 16px;
+
+ 
+ 
+}
+
+.item1 {
+  
+  grid-area: menu;
+  }
+
+.item2 {
+  margin-top: 100px;
+  grid-area: menu;
+  }
+  
+  
+.item3 {
+  grid-area: main;
+  max-width: 80vh;
+}
+
+.item3 > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.item3 > p {
+  margin-bottom: 7px;
+}
+
+.item4 {
+  grid-area: right;
+  
+  /* background-color: #dad943; */
+  padding: 15px;
+  color: #000000;
+  border-radius: 15px;
+ 
+}
+
+.item4 > h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.item4 li {
+    float: none;
+    text-align: center;
+font-size: 12px;
+font-weight: 600;
+  padding: 15px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  
+  list-style-type: none;
+  /* border: 2pc solid red; */
+  background-color: #dad943;
+  border-radius: 50px;
+
+}
+
+button{
+  font-size: 12px;
+font-weight: 600;
+  padding: 15px 30px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: #FFC845;
+  border-radius: 50px;
+ border: 1px solid #FFC845;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item4 li {float: left;}
+  /* .item2 {margin-top: 0px;} */
+}
+
+@media only screen and (min-width: 600px) {
+  
+  .item1 {grid-area: 2 / span 1;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 3 / span 4;}
+  .item4 {grid-area: 4 / span 6;}
+  .item4 li {float: left;}
+  /* .item2 {margin-top: 0px;} */
+  
+}
+
+@media only screen and (min-width: 768px) {
+
+  .item1 {grid-area: 2 / span 1;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 3 / span 4;}
+  .item4 {grid-area: 3 / span 1;}
+  .item4 li {float: left;}
+  /* .item2 {margin-top: 100px;} */
+  
+}
+    /* ====================================== */
+
+    .fade-in {
+  opacity: 0;
+  animation: fadeIn 5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ====================================== */
+
+.backbutton{
+ 
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #ffc845;
+  border-radius: 50px;
+color: #232323;
+  padding: 10px 15px;
+
+}
+
+
+/* ===================== video section ========================== */
+/* .header-box {
+  display: grid;
+grid-template-columns: 1fr 1fr;
+aspect-ratio: 1 / 0.5;
+height: 500px; 
+
+width: 100%;
+
+
+background: #dddfcc;
+border-radius: 15px;
+margin-top: 10px;
+margin-bottom: 10px;
+} */
+
+
+
+.header-box video{
+  position: relative;
+  /* margin: 40px auto; */
+  /* border-radius: 15px; */
+  /* overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: url('asset/images/sticker/smile sticker_v01.png'), auto;
+
+}
+
+
+
+
+
+/* ========================================================== */

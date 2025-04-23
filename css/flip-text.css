@@ -1,0 +1,57 @@
+
+/* <!-- Google Font --> */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+
+
+/*============  Flip Effect for Menu============ */
+
+    .flip-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* animation: fadeIn 1s ease-in forwards, flipIn 1s ease-out forwards; Add load animation */
+
+    }
+
+    /* @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    } */
+
+    /* @keyframes flipIn {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    } */
+
+    .letter-wrapper {
+      overflow: hidden;
+      height: 1.2em;
+      display: inline-block;
+     
+    }
+
+    .letter-inner {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.5s;
+    }
+
+    .flip-text:hover .letter-inner {
+      transform: translateY(-53%);
+    }
+
+    /* Optional: staggered effect */
+    .flip-text .letter-wrapper:nth-child(1) .letter-inner { transition-delay: 0s; }
+    .flip-text .letter-wrapper:nth-child(2) .letter-inner { transition-delay: 0.1s; }
+    .flip-text .letter-wrapper:nth-child(3) .letter-inner { transition-delay: 0.2s; }
+    .flip-text .letter-wrapper:nth-child(4) .letter-inner { transition-delay: 0.3s; }
+    .flip-text .letter-wrapper:nth-child(5) .letter-inner { transition-delay: 0.4s; }
+    .flip-text .letter-wrapper:nth-child(6) .letter-inner { transition-delay: 0.5s; }
+    .flip-text .letter-wrapper:nth-child(7) .letter-inner { transition-delay: 0.6s; }
+    .flip-text .letter-wrapper:nth-child(8) .letter-inner { transition-delay: 0.7s; }
+    .flip-text .letter-wrapper:nth-child(9) .letter-inner { transition-delay: 0.8s; }

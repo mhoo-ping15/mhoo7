@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinetic Typography Project</title>
+    <link rel="icon" type="image/x-icon" href="asset/images/sticker/smile sticker_v01.svg">
+  
+    <link rel="stylesheet" href="css/project_v01.css">
+   
+    <link rel="stylesheet" href="css/menu-style.css">
+     <link rel="stylesheet" href="css/flip-text.css">
+     <!-- <link rel="stylesheet" href="css/main-style.css"> -->
+     
+     <script src="script/menu-script.js"></script>
+     <script src="script/project_v01.js"></script>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  margin: 0;
+  padding: 1rem;
+  color: #2d2d2d;
+}
+
+.container {
+    margin-top: 100px;
+  width: 100%;
+  max-width: 100%;
+}
+
+h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 0.5rem 0rem 1.5rem;
+  /* font-size: 2rem; */
+}
+
+.main-image {
+  background-color: #d9e021;
+  border-radius: 14px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.5rem;
+}
+
+.header-box video{
+  position: relative;
+  /* margin: 40px auto; */
+  /* border-radius: 15px; */
+  /* overflow: hidden; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  cursor: url('asset/images/sticker/smile sticker_v01.svg'), auto;
+
+}
+.content p {
+  /* font-size: 1rem; */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  background-color: #d9e021;
+  padding: 0.4rem 0.8rem;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.bottom-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.img-box {
+  background-color: #d9e021;
+  border-radius: 14px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* Optional: consistent height if you don't want aspect-ratio */
+/* .img-box, .main-image {
+  height: 250px;
+} */
+
+/* Responsive layout: optional row layout on wider screens */
+@media (min-width: 768px) {
+  .bottom-images {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .img-box {
+    flex: 1 1 33.333%;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <!-- Menu Navbar with Logo and Hamburger Icon -->
+    <header id="main-header">
+        <div class="row">
+            <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none;"><h3>mhoo__ping</h3></a></div>
+            <div class="column">...</div>
+            <div class="column" onclick="on()"><h3>
+              <div class="flip-text">
+                <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+                <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
+                <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+                <div class="letter-wrapper"><div class="letter-inner"><span>n</span><span>n</span></div></div>
+                <div class="letter-wrapper"><div class="letter-inner"><span>u</span><span>u</span></div></div>
+              </div>
+            </h3></div> 
+        </div>
+       
+        <!-- Overlay Menu -->
+        <div id="overlay">
+            <header class="row">
+                <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
+                <div class="column">..</div>
+                <div class="column" onclick="off()"><h3>
+                    <div class="flip-text">
+                      <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+                      <div class="letter-wrapper"><div class="letter-inner"><span>c</span><span>c</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>l</span><span>l</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>o</span><span>o</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>s</span><span>s</span></div></div>
+                      <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+                    </div>  
+                  </h3></div>
+            </header>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html" onclick="off()"><h2>home</h2></a></li>
+                    <li><a href="portfolio_v02.html" onclick="off()"><h2>portfolio</h2></a></li>
+                    <li><a href="motion_v01.html" onclick="off()"><h2>motion</h2></a></li>
+                    <li><a href="index.html#about" onclick="off()"><h2>about</h2></a></li>
+                    <li><a href="index.html#contact" onclick="off()"><h2>contact</h2></a></li>
+  
+                </ul>
+            </nav>
+  
+            <footer>
+                <div class="row">
+                <div class="column"><a href="index.html" style="color: beige;text-decoration: none;">2025 &copy; mhoo_ping</a></div>
+                <div class="column">..</div>
+                <div class="column" >
+                  <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: beige;text-decoration: none;">Instagram</a> &ThickSpace;
+                  <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: beige;text-decoration: none;">LinkedIn</a> 
+                            
+                </div>
+                
+            </footer>
+        </div>
+  
+        <div class="menu-banner" id="banner">
+          *
+           </div>
+    </header>
+  
+  
+
+
+<!-- project -->
+ <div class="container">
+  <p style="background-color: #ead9c2; border-radius: 50px; width: 140px; padding: 5px 30px;">project</p>
+  
+    <h1>SASO SINK Installation Project</h1>
+
+    <div class="main-image">
+      <div class="header-box">
+        <video width="320" height="240" controls>
+          <source src="asset/Portfolio/Cable - Saso Sink/SASO - Installation_Mini Reel.mp4" type="video/mp4">
+          
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        Explaining Motion Graphic
+
+        I had the opportunity to work on a freelance project for Caple, producing the explaining graphic on how to build the SASO sink step-by-step.      </p>
+
+      <div class="tags">
+        <span class="tag">Cinema4D</span>
+        <span class="tag">Octane Render</span>
+        <span class="tag">Adobe After Effects</span>
+        <span class="tag">Adobe Illustrator</span>
+      </div>
+    </div>
+
+    <div class="bottom-images">
+      <div class="img-box">01</div>
+      <div class="img-box">02</div>
+      <div class="img-box wide">03</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
