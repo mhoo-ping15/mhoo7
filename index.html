@@ -193,10 +193,18 @@ h1 {
 }
 
 .experience-item h3 {
+    color: #232323;
     margin-bottom: 10px;
-    font-size: 1.4em;
+    font-size: 4em;
+    line-height: 4rem;
+    
 }
 
+.experience-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
 
 
 /* Contact Footer Section */
@@ -239,7 +247,8 @@ p {
 /* --- Responsive Adjustments (Example) --- */
 @media (max-width: 1000px) {
     h1 {
-        font-size: 4em;
+        font-size: 3em;
+        text-align: left;
     }
     
     .experience-grid {
@@ -335,7 +344,7 @@ p {
   
 
 
-    <section class="hero">
+    <section class="hero" data-color="#232323">
         <div class="container">
             <h1>
   <!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In  -->
@@ -395,7 +404,7 @@ p {
         </div>
     </section>
 
-    <section class="video-placeholder">
+    <section class="video-placeholder" data-color="#232323">
       <video class="video-full" autoplay loop muted playsinline>
         <source src="asset/footage/Ittydesigns Reel_v01_h264.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -403,7 +412,7 @@ p {
   </section>
   
 
-  <section id="about" class="about-intro">
+  <section id="about" class="about-intro" data-color="#ffffff">
     <div class="container">
         <div class="story-box">
             <img src="asset/footage/googd-morning-itty_v09_lime-green-bg-2.gif" alt="About Me GIF" class="story-gif">
@@ -412,7 +421,7 @@ p {
     
 </section>
 
-    <section class="about-details">
+    <section class="about-details" data-color="#ffffff">
         <div class="container">
             <div class="about-box">
                 <span class="tag">About me</span>
@@ -422,27 +431,27 @@ p {
         </div>
     </section>
 
-    <section class="experience">
+    <section class="experience" data-color="#ffffff">
         <div class="container">
             <div class="experience-grid">
                 <div class="experience-item">
-                    <h3>2 years</h3><br>
+                    <h3>two years</h3><br>
                       <h4>24 Oct 2022 - Present</h4><br>
                       <p>Mid-Graphic Designer <br> Oak Tree Mobility, Bristol</p>
                 </div>
                 <div class="experience-item">
-                    <h3>4 years</h3><br>
+                    <h3>four years</h3><br>
                       <h4>2018–2022</h4><br>
                       <p>Designer <br> Holey and Moley Ltd, Bristol</p>
                 </div>
                  <div class="experience-item">
-                    <h3>2 weeks</h3><br>
+                    <h3>two weeks</h3><br>
                       <h4>Internship 2018</h4><br>
                       <p>Graphic Designer<br>
                          Waters: Creative Design Agency, Swansea</p>
                 </div>
                  <div class="experience-item">
-                    <h3>3 years</h3><br>
+                    <h3>three years</h3><br>
                       <h4>2015–2018</h4><br>
                       <p>BA (Hons) Graphic Design<br>
                          University of Wales, Trinity Saint David<br>
@@ -452,7 +461,7 @@ p {
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-color="#232323">
         <div class="container">
             <h1>get in touch</h1>
             <p><a href="mailto:ittydesigns@gmail.com" class="highlight email">ittydesigns@gmail.com</a></p>
@@ -460,7 +469,7 @@ p {
     </section>
     
  <!-- Footer -->
- <footer>
+ <footer  id="main-header">
     <div class="row">
       <div class="column"><a href="index.html" style="color: rgb(255, 255, 255);text-decoration: none;">2025 &copy; mhoo_ping</a></div>
       <div class="column">..</div>
@@ -473,6 +482,41 @@ p {
       </div>
   </footer>
 
+  <script>
+
+// ==================== change colour menu ====================================
+
+const header = document.getElementById('main-header');
+const sections = document.querySelectorAll('section');
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        const color = entry.target.getAttribute('data-color'); // Get the color from data-color attribute
+        header.style.color = color; // Apply color to header text
+
+        // Optional: Change logo/hamburger colors too (this is what you're doing with the flip-text)
+        const flipText = document.querySelectorAll('.flip-text span');
+        flipText.forEach(span => span.style.color = color);
+
+        const logo = document.querySelectorAll('header h3');
+        logo.forEach(el => el.style.color = color);
+    }
+});
+}, {
+threshold: 0.4 // Adjust this value if needed (to trigger when the section is more than 50% visible)
+});
+
+sections.forEach(section => observer.observe(section));
+
+
+
+// ======================================================================
+
+</script>
+
+
+  
 </body>
 </html>
 
