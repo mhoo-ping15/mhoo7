@@ -108,11 +108,22 @@ h1 {
   gap: 1rem;
 }
 
-.img-box {
+/* .img-box {
   background-color: #d9e021;
   border-radius: 14px;
   width: 100%;
   aspect-ratio: 16 / 9;
+} */
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 15 / 9;
+  border-radius: 14px;
+  
+
 }
 
 /* Optional: consistent height if you don't want aspect-ratio */
@@ -132,6 +143,84 @@ h1 {
   }
 }
 
+
+
+  /* ======================================================= */
+
+
+  .grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu  main right';
+  gap: 10px;
+  /* background-color: white; */
+  padding: 10px;
+}
+
+.grid-container > div {
+  padding: 20px;
+  font-size: 16px;
+
+}
+
+.item4 {
+  grid-area: right;
+  
+  /* background-color: #dad943; */
+  padding: 15px;
+  color: #000000;
+  border-radius: 15px;
+}
+
+.item4 > h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.item4 li {
+    float: none;
+    text-align: center;
+font-size: 12px;
+font-weight: 600;
+  padding: 15px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  list-style-type: none;
+  /* border: 2pc solid red; */
+  background-color: #dad943;
+  border-radius: 50px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  
+  
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item4 li {float: left;}
+  /* .item2 {margin-top: 0px;} */
+}
+
+@media only screen and (min-width: 600px) {
+  
+  
+  .item3 {grid-area: 3 / span 4;}
+  .item4 {grid-area: 4 / span 6;}
+  .item4 li {float: left;}
+  /* .item2 {margin-top: 0px;} */
+  
+}
+
+@media only screen and (min-width: 768px) {
+	
+  
+  .item3 {grid-area: 3 / span 4;}
+  .item4 {grid-area: 3 / span 1;}
+  .item4 li {float: none;}
+  /* .item2 {margin-top: 100px;} */
+  
+}
+    /* ====================================== */
 
 
 </style>
@@ -211,34 +300,45 @@ h1 {
     <div class="main-image">
       <div class="header-box">
         <video width="320" height="240" controls>
-          <source src="asset/Portfolio/Cable - Saso Sink/SASO - Installation_Mini Reel.mp4" type="video/mp4">
+          <source src="https://helloittydesigns.wordpress.com/wp-content/uploads/2024/04/saso-installation_mini-reel.mp4" type="video/mp4">
           
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
 
-    <div class="content">
-      <p>
-        Explaining Motion Graphic
+    <div class="grid-container">
 
-        I had the opportunity to work on a freelance project
-        for Caple, producing the explaining graphic
-        on how to build the SASO sink step-by-step.
-        <span class="highlight motion" ><a href="" style="text-decoration: none; color: #232323">Visit full video </a></span>
-      </p>
-      <div class="tags">
-        <span class="tag">Cinema4D</span>
-        <span class="tag">Octane Render</span>
-        <span class="tag">Adobe After Effects</span>
-        <span class="tag">Adobe Illustrator</span>
-      </div>
+
+      <div class="item4">
+          <ul>
+            <li>Adobe After Effect</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photopshop</li>
+            <li>Cinema4D</li>
+            
+          </ul>
+        </div>
+     
+  
+      <div class="item3">
+        
+        <p>
+
+I had the opportunity to work on an external project for Caple, creating a Explaining Motion Graphic that visually explains the step-by-step assembly process of the SASO sink. The project was developed using Cinema 4D with Octane Render, Adobe After Effects, and Adobe Illustrator. The visual style focused on clean, minimal design with precise animations to clearly communicate each step, aligning with Caple’s modern and functional brand aesthetic.      </div>  
+  
     </div>
 
     <div class="bottom-images">
-      <div class="img-box">01</div>
-      <div class="img-box">02</div>
-      <div class="img-box wide">03</div>
+      <div class="img-box">
+        <img src="https://helloittydesigns.wordpress.com/wp-content/uploads/2025/04/saso_breakdown_v01.gif" alt="GIF">
+      </div>
+      <div class="img-box">
+        <img src="https://helloittydesigns.wordpress.com/wp-content/uploads/2025/04/saso-sink-gfx-grid-backgorund-test.gif" alt="GIF2">
+      </div>
+      <div class="img-box wide">
+        <img src="https://helloittydesigns.wordpress.com/wp-content/uploads/2024/03/saso_saso_kitchen_copper3796.png" alt="image">
+      </div>
     </div>
   </div>
 
