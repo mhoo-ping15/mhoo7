@@ -19,7 +19,7 @@
         html { 
             scroll-behavior: smooth; /* Smooth scrolling added here */
         }
-        body { font-family: "Funnel Display", sans-serif; background-color: #dad943; }
+        body { font-family: "Funnel Display", sans-serif; background: #EFE1CE; }
 
         /*============ Full-Height Sections ============ */
         /* section {
@@ -36,22 +36,13 @@
 
 
  /*================== grid Motion section ======================== */
- #motion {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;  /* Allow the section to expand with content */
-    min-height: 100vh;  /* Minimum height of 100vh to ensure it still takes up the full screen */
-    width: 100%;
-    background: #EFE1CE;
-    overflow: hidden;  /* Prevent overflow of grid items */
-}
+
 
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-    grid-template-rows: repeat(5, 1fr); /* 5 rows of equal height */
+    grid-template-rows: repeat(3, 1fr); /* 5 rows of equal height */
     gap: 10px;
     width: 100%;
     height: auto; /* Make the height auto so it adjusts based on grid items */
@@ -77,7 +68,7 @@
 @media (max-width: 1200px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-        grid-template-rows: repeat(8, 1fr); /* More rows */
+        grid-template-rows: repeat(2, 1fr); /* More rows */
     }
 }
 
@@ -181,71 +172,72 @@
 
 </head>
 <body>
-    <!-- Menu Navbar with Logo and Hamburger Icon -->
-    <header id="main-header">
-        <div class="row">
-            <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none;"><h3>mhoo__ping</h3></a></div>
+    
+   <!-- Menu Navbar with Logo and Hamburger Icon -->
+   <header id="main-header">
+    <div class="row">
+        <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none;"><h3>itty</h3></a></div>
+        <div class="column">..</div>
+        <div class="column" onclick="on()"><h3>
+          <div class="flip-text">
+            <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+            <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
+            <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+            <div class="letter-wrapper"><div class="letter-inner"><span>n</span><span>n</span></div></div>
+            <div class="letter-wrapper"><div class="letter-inner"><span>u</span><span>u</span></div></div>
+          </div>
+        </h3></div> 
+    </div>
+   
+    <!-- Overlay Menu -->
+    <div id="overlay">
+        <header class="row">
+            <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none; color: red;"><h3>itty</h3></a></div>
             <div class="column">..</div>
-            <div class="column" onclick="on()"><h3>
-              <div class="flip-text">
-                <!-- Each letter is a wrapper with two lines (original and duplicate) -->
-                <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
-                <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
-                <div class="letter-wrapper"><div class="letter-inner"><span>n</span><span>n</span></div></div>
-                <div class="letter-wrapper"><div class="letter-inner"><span>u</span><span>u</span></div></div>
-              </div>
-            </h3></div> 
-        </div>
-       
-        <!-- Overlay Menu -->
-        <div id="overlay">
-            <header class="row">
-                <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
-                <div class="column">..</div>
-                <div class="column" onclick="off()"><h3>
-                    <div class="flip-text">
-                      <!-- Each letter is a wrapper with two lines (original and duplicate) -->
-                      <div class="letter-wrapper"><div class="letter-inner"><span>c</span><span>c</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>l</span><span>l</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>o</span><span>o</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>s</span><span>s</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
-                    </div>  
-                  </h3></div>
-            </header>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html" onclick="off()"><h2>home</h2></a></li>
-                    <li><a href="portfolio_v02.html" onclick="off()"><h2>portfolio</h2></a></li>
-                    <li><a href="motion_v01.html" onclick="off()"><h2>motion</h2></a></li>
-                    <li><a href="index.html#about" onclick="off()"><h2>about</h2></a></li>
-                    <li><a href="index.html#contact" onclick="off()"><h2>contact</h2></a></li>
-  
-                </ul>
-            </nav>
-  
-            <footer>
-                <div class="row">
-                <div class="column"><a href="index.html" style="color: beige;text-decoration: none;">2025 &copy; mhoo_ping</a></div>
-                <div class="column">..</div>
-                <div class="column" >
-                  <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: beige;text-decoration: none;">Instagram</a> &ThickSpace;
-                  <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: beige;text-decoration: none;">LinkedIn</a> 
-                            
-                </div>
-                
-            </footer>
-        </div>
-  
-        <div class="menu-banner" id="banner">
-          *
-           </div>
-    </header>
+            <div class="column" onclick="off()"><h3>
+                <div class="flip-text">
+                  <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+                  <div class="letter-wrapper"><div class="letter-inner"><span>c</span><span>c</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>l</span><span>l</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>o</span><span>o</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>s</span><span>s</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+                </div>  
+              </h3></div>
+        </header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" onclick="off()"><h2>home</h2></a></li>
+                <li><a href="portfolio_v02.html" onclick="off()"><h2>portfolio</h2></a></li>
+                <li><a href="motion_v01.html" onclick="off()"><h2>motion</h2></a></li>
+                <li><a href="index.html#about" onclick="off()"><h2>about</h2></a></li>
+                <li><a href="index.html#contact" onclick="off()"><h2>contact</h2></a></li>
+
+            </ul>
+        </nav>
+
+        <footer>
+            <div class="row">
+            <div class="column"><a href="index.html" style="color: beige;text-decoration: none;">2025 &copy; mhoo_ping</a></div>
+            <div class="column">..</div>
+            <div class="column" >
+              <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: beige;text-decoration: none;">Instagram</a> &ThickSpace;
+              <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: beige;text-decoration: none;">LinkedIn</a> 
+                        
+            </div>
+            
+        </footer>
+    </div>
+
+    <div class="menu-banner" id="banner">
+      *
+       </div>
+</header>
   
 
 
 
-<section id="motion">
+<section>
     
     <div class="grid-container">
 
@@ -254,10 +246,10 @@
           <!-- ============ Holey & Moley showreal ============ -->
           <div class="grid-item fade-item"><a href="h&m_showreel_v01.html">
             <div class="overlay-motion"> <div class="middle"><div class="text">Holey & Moley showreel</div></div>
-            <img src="asset\Portfolio\Holey & Moley\Itthikorn-Duangchat-H&M-Showreel_v02.gif" alt="image">
+            <img src="asset\Portfolio\Holey & Moley\Itthikorn-Duangchat-H&M-Showreel_v02.gif" alt="Holey & Moley showreel">
         </div>
         
-            <img src="asset/Portfolio/Holey & Moley/Itty Reel-02.png" alt="image">
+            <img src="asset/Portfolio/Holey & Moley/Itty Reel-02.png" alt="Holey & Moley showreel">
 
            </a></div>
 
@@ -265,20 +257,20 @@
           <!-- ============ SASO SINK Installation ============ -->
           <div class="grid-item fade-item"><a href="saso sink installation_v01.html">
             <div class="overlay-motion"> <div class="middle"><div class="text">SASO SINK Installation</div></div>
-            <img src="asset\Portfolio\Cable - Saso Sink\SASO-Installation_Mini-Reel.gif" alt="image">
+            <img src="asset\Portfolio\Cable - Saso Sink\SASO-Installation_Mini-Reel.gif" alt="SASO SINK Installation">
         </div>
         
-            <img src="asset/Portfolio/Cable - Saso Sink/SASO-Installation_Mini-Reel cover.jpg" alt="image">
+            <img src="asset/Portfolio/Cable - Saso Sink/SASO-Installation_Mini-Reel cover.jpg" alt="SASO SINK Installation">
 
            </a></div>
               
           <!-- ============ Re-design packaging ============ -->
           <div class="grid-item fade-item"><a href="">
             <div class="overlay-motion"> <div class="middle"><div class="text">Re-design packaging</div></div>
-            <img src="asset/Portfolio/Re-Design Packaging/re-design packagin cover.gif" alt="image">
+            <img src="asset/Portfolio/Re-Design Packaging/re-design packagin cover.gif" alt="Re-design packaging">
         </div>
         
-            <img src="asset/Portfolio/Re-Design Packaging/Morrison-Packaging_Mockup_v01.jpg" alt="image">
+            <img src="asset/Portfolio/Re-Design Packaging/Morrison-Packaging_Mockup_v01.jpg" alt="Re-design packaging">
 
            </a></div>
 
