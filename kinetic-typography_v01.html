@@ -6,8 +6,8 @@
     <title>Kinetic Typography Project</title>
     <link rel="icon" type="image/x-icon" href="asset/images/sticker/smile sticker_v01.svg">
   
-    <link rel="stylesheet" href="css/project_v01.css">
    
+    <link rel="stylesheet" href="css/project_v01.css">
     <link rel="stylesheet" href="css/menu-style.css">
      <link rel="stylesheet" href="css/flip-text.css">
      <!-- <link rel="stylesheet" href="css/main-style.css"> -->
@@ -16,319 +16,148 @@
      <script src="script/project_v01.js"></script>
 
 
-<style>
-* {
-  box-sizing: border-box;
-}
 
-body {
-  
-  margin: 0;
-  padding: 1rem;
-  color: #2d2d2d;
-}
-
-
-:root {
-  --color-highlight: #ffc845;
-  --color-text-light: #ffffff;
-}
-
-.container {
-    margin-top: 100px;
-  width: 100%;
-  max-width: 100%;
-}
-
-h5 {
-  margin: 0;
-  font-weight: 400;
-}
-
-h1 {
-  margin: 0.5rem 0rem 1.5rem;
-  /* font-size: 2rem; */
-}
-
-.main-image {
-  background-color: #d9e021;
-  border-radius: 14px;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  margin-bottom: 1.5rem;
-}
-
-.header-box video{
-  position: relative;
-  /* margin: 40px auto; */
-  /* border-radius: 15px; */
-  /* overflow: hidden; */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  cursor: url('asset/images/sticker/smile sticker_v01.svg'), auto;
-
-}
-.content p {
-  /* font-size: 1rem; */
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.content .highlight {
-    background-color: var(--color-highlight);
-    color: var(--color-text-light); /* White text on highlight */
-    padding: 5px 50px;
-    margin-bottom: 10px;
-    border-radius: 100px;
-    display: inline-block; /* Allows padding and background */
-    text-decoration: none;
-
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.tag {
-  background-color: #d9e021;
-  padding: 0.4rem 0.8rem;
-  border-radius: 14px;
-  font-size: 0.85rem;
-  font-weight: bold;
-}
-
-.bottom-images {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.img-box {
-  background-color: #d9e021;
-  border-radius: 14px;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-}
-
-/* Optional: consistent height if you don't want aspect-ratio */
-/* .img-box, .main-image {
-  height: 250px;
-} */
-
-/* Responsive layout: optional row layout on wider screens */
-@media (min-width: 768px) {
-  .bottom-images {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .img-box {
-    flex: 1 1 33.333%;
-  }
-}
-
-
-
-  /* ======================================================= */
-
-
-  .grid-container {
-  display: grid;
-  grid-template-areas:
-    'menu  main right';
-  gap: 10px;
-  /* background-color: white; */
-  padding: 10px;
-}
-
-.grid-container > div {
-  padding: 20px;
-  font-size: 16px;
-
-}
-
-.item4 {
-  grid-area: right;
-  
-  /* background-color: #dad943; */
-  padding: 15px;
-  color: #000000;
-  border-radius: 15px;
-}
-
-.item4 > h2 {
-  font-size: 20px;
-  padding-bottom: 10px;
-}
-
-.item4 li {
-    float: none;
-    text-align: center;
-font-size: 12px;
-font-weight: 600;
-  padding: 15px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  list-style-type: none;
-  /* border: 2pc solid red; */
-  background-color: #dad943;
-  border-radius: 50px;
-
-}
-
-@media only screen and (max-width: 600px) {
-  
-  
-  .item3 {grid-area: 3 / span 6;}
-  .item4 {grid-area: 4 / span 6;}
-  .item4 li {float: left;}
-  /* .item2 {margin-top: 0px;} */
-}
-
-@media only screen and (min-width: 600px) {
-  
-  
-  .item3 {grid-area: 3 / span 4;}
-  .item4 {grid-area: 4 / span 6;}
-  .item4 li {float: left;}
-  /* .item2 {margin-top: 0px;} */
-  
-}
-
-@media only screen and (min-width: 768px) {
-	
-  
-  .item3 {grid-area: 3 / span 4;}
-  .item4 {grid-area: 3 / span 1;}
-  .item4 li {float: left;}
-  /* .item2 {margin-top: 100px;} */
-  
-}
-    /* ====================================== */
-
-
-</style>
+     <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      html { 
+              scroll-behavior: smooth;
+              overflow-x: hidden;
+              background-color: #efe1ce;
+          }
+      
+      body {
+        
+        margin: 0;
+        padding: 1rem;
+        color: #2d2d2d;
+       
+      }
+      
+     
+      
+      </style>
 </head>
 <body>
 
-    <!-- Menu Navbar with Logo and Hamburger Icon -->
-    <header id="main-header">
-        <div class="row">
-            <div class="column"><a href="index.html" onclick="off()"  style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
-            <div class="column">...</div>
-            <div class="column" onclick="on()"><h3>
-              <div class="flip-text">
-                <!-- Each letter is a wrapper with two lines (original and duplicate) -->
-                <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
-                <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
-                <div class="letter-wrapper"><div class="letter-inner"><span>n</span><span>n</span></div></div>
-                <div class="letter-wrapper"><div class="letter-inner"><span>u</span><span>u</span></div></div>
-              </div>
-            </h3></div> 
-        </div>
-       
-        <!-- Overlay Menu -->
-        <div id="overlay">
-            <header class="row">
-                <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
-                <div class="column">..</div>
-                <div class="column" onclick="off()"><h3>
-                    <div class="flip-text">
-                      <!-- Each letter is a wrapper with two lines (original and duplicate) -->
-                      <div class="letter-wrapper"><div class="letter-inner"><span>c</span><span>c</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>l</span><span>l</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>o</span><span>o</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>s</span><span>s</span></div></div>
-                      <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
-                    </div>  
-                  </h3></div>
-            </header>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html" onclick="off()"><h2>home</h2></a></li>
-                    <li><a href="portfolio_v02.html" onclick="off()"><h2>portfolio</h2></a></li>
-                    <li><a href="motion_v01.html" onclick="off()"><h2>motion</h2></a></li>
-                    <li><a href="index.html#about" onclick="off()"><h2>about</h2></a></li>
-                    <li><a href="index.html#contact" onclick="off()"><h2>contact</h2></a></li>
-  
-                </ul>
-            </nav>
-  
-            <footer>
-                <div class="row">
-                <div class="column"><a href="index.html" style="color: beige;text-decoration: none;">2025 &copy; mhoo_ping</a></div>
-                <div class="column">..</div>
-                <div class="column" >
-                  <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: beige;text-decoration: none;">Instagram</a> &ThickSpace;
-                  <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: beige;text-decoration: none;">LinkedIn</a> 
-                            
-                </div>
-                
-            </footer>
-        </div>
-  
-        <div class="menu-banner" id="banner">
-          *
-           </div>
-    </header>
-  
-  
+   <!-- Menu Navbar with Logo and Hamburger Icon -->
+   <header id="main-header">
+    <div class="row">
+        <div class="column"><a href="index.html" onclick="off()"  style="text-decoration: none;"><h3 style="color: #232323;">mhoo__ping</h3></a></div>
+        <div class="column">...</div>
+        <div class="column" onclick="on()"><h3>
+          <div class="flip-text" style="text-decoration: none; color: #232323;">
+            <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+            <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
+            <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+            <div class="letter-wrapper"><div class="letter-inner"><span>n</span><span>n</span></div></div>
+            <div class="letter-wrapper"><div class="letter-inner"><span>u</span><span>u</span></div></div>
+          </div>
+        </h3></div> 
+    </div>
+   
+    <!-- Overlay Menu -->
+    <div id="overlay">
+        <header class="row">
+            <div class="column"><a href="index.html" onclick="off()" style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
+            <div class="column">..</div>
+            <div class="column" onclick="off()"><h3>
+                <div class="flip-text">
+                  <!-- Each letter is a wrapper with two lines (original and duplicate) -->
+                  <div class="letter-wrapper"><div class="letter-inner"><span>c</span><span>c</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>l</span><span>l</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>o</span><span>o</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>s</span><span>s</span></div></div>
+                  <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
+                </div>  
+              </h3></div>
+        </header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" onclick="off()"><h2>home</h2></a></li>
+                <li><a href="portfolio_v02.html" onclick="off()"><h2>portfolio</h2></a></li>
+                <li><a href="motion_v01.html" onclick="off()"><h2>motion</h2></a></li>
+                <li><a href="index.html#about" onclick="off()"><h2>about</h2></a></li>
+                <li><a href="index.html#contact" onclick="off()"><h2>contact</h2></a></li>
+
+            </ul>
+        </nav>
+
+        <footer>
+            <div class="row">
+            <div class="column"><a href="index.html" style="color: beige;text-decoration: none;">2025 &copy; mhoo_ping</a></div>
+            <div class="column">..</div>
+            <div class="column" >
+              <a href="https://www.instagram.com/ittydesigns/" target="_blank" style="color: beige;text-decoration: none;">Instagram</a> &ThickSpace;
+              <a href="https://www.linkedin.com/in/itthikornd/" target="_blank" style="color: beige;text-decoration: none;">LinkedIn</a> 
+                        
+            </div>
+            
+        </footer>
+    </div>
+
+    <div class="menu-banner" id="banner">
+      *
+       </div>
+</header>
+
 
 
 <!-- project -->
- <div class="container">
-  <p style="background-color: #ead9c2; border-radius: 50px; width: 140px; padding: 5px 30px;">project</p>
-  
-    <h1>SASO SINK Installation Project</h1>
+<div class="container">
+<p style="background-color: #ead9c2; border-radius: 50px; width: 140px; padding: 5px 30px;">project</p>
 
-    <div class="main-image">
-      <div class="header-box">
-        <video width="320" height="240" controls>
-          <source src="https://helloittydesigns.wordpress.com/wp-content/uploads/2024/04/itthikorn-duangchat-hm-showreel.mp4" type="video/mp4">
-          
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
+  <h1>Kinetic Typography Project</h1>
 
-    <div class="grid-container">
-
-
-      <div class="item4">
-          <ul>
-            <li>Adobe After Effect</li>
-            <li>Adobe Illustrator</li>
-            <li>Adobe Photopshop</li>
-            <li>Cinema4D</li>
-          </ul>
-        </div>
-     
-  
-      <div class="item3">
+  <div class="main-image">
+    <div class="header-box">
+      <video width="320" height="240" controls>
+        <source src="https://helloittydesigns.wordpress.com/wp-content/uploads/2024/04/cae_good-morning-vietnam_v02.mp4" type="video/mp4">
         
-        <p>
-          I have spent the last 4 years working as a Motion Designer
-          for Holey and Moley Ltd in Bristol. My role was involves
-          motion graphics, branding design, 3D animation and typography.
-          During that time I have developed my communication skills which
-          allows me to interact with colleagues and take briefs from the creative 
-          director and clients. I have also learnt new programs such as Adobe After Effects 
-          and Cinema4D for the past three years.</p>
-      </div>  
-  
-    </div>
-
-    <div class="bottom-images">
-      <div class="img-box">01</div>
-      <div class="img-box">02</div>
-      <div class="img-box wide">03</div>
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
+
+  <div class="grid-container">
+
+
+    <div class="item4">
+        <ul>
+          <li>Adobe After Effect</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe Photopshop</li>
+          <li>Cinema4D</li>
+          
+        </ul>
+      </div>
+   
+
+    <div class="item3">
+      
+      <p>
+
+I had the opportunity to work on an external project for Caple, creating a Explaining Motion Graphic that visually explains the step-by-step assembly process of the SASO sink. The project was developed using Cinema 4D with Octane Render, Adobe After Effects, and Adobe Illustrator. The visual style focused on clean, minimal design with precise animations to clearly communicate each step, aligning with Caple’s modern and functional brand aesthetic.      </div>  
+
+  </div>
+
+  <div class="bottom-images">
+    <div class="img-box">
+      <img src="https://helloittydesigns.wordpress.com/wp-content/uploads/2024/03/story-board_v02.jpg" alt="image">
+    </div>
+    <div class="img-box">
+      <img src="https://helloittydesigns.wordpress.com/wp-content/uploads/2025/04/13-the-end-01.jpg" alt="image">
+    </div>
+    <div class="img-box wide">
+      <img src="https://helloittydesigns.wordpress.com/wp-content/uploads/2024/03/cae_gmv_story-board_v02.jpg" alt="image">
+    </div>
+  </div>
+</div>
+
+
+
 
 
    <!-- Footer -->
