@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinetic Typography Project</title>
+    <title>SASO SINK Installation Project</title>
     <link rel="icon" type="image/x-icon" href="asset/images/sticker/smile sticker_v01.svg">
-  
-    <link rel="stylesheet" href="css/project_v01.css">
-   
+
+
     <link rel="stylesheet" href="css/menu-style.css">
      <link rel="stylesheet" href="css/flip-text.css">
      <!-- <link rel="stylesheet" href="css/main-style.css"> -->
@@ -17,15 +16,25 @@
 
 
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
+html { 
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-color: #efe1ce;
+    }
+
 body {
-  
+  font-family: "Funnel Display", sans-serif; 
   margin: 0;
   padding: 1rem;
   color: #2d2d2d;
+ 
 }
 
 
@@ -47,7 +56,15 @@ h5 {
 
 h1 {
   margin: 0.5rem 0rem 1.5rem;
-  /* font-size: 2rem; */
+  font-size: 3rem;
+}
+
+
+p{
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .main-image {
@@ -61,7 +78,7 @@ h1 {
 .header-box video{
   position: relative;
   /* margin: 40px auto; */
-  /* border-radius: 15px; */
+  border-radius: 15px;
   /* overflow: hidden; */
   width: 100%;
   height: 100%;
@@ -180,8 +197,9 @@ h1 {
 .item4 li {
     float: none;
     text-align: center;
-font-size: 12px;
-font-weight: 600;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
   padding: 15px;
   margin-bottom: 5px;
   margin-right: 5px;
@@ -230,10 +248,10 @@ font-weight: 600;
     <!-- Menu Navbar with Logo and Hamburger Icon -->
     <header id="main-header">
         <div class="row">
-            <div class="column"><a href="index.html" onclick="off()"  style="text-decoration: none; color: red;"><h3>mhoo__ping</h3></a></div>
+            <div class="column"><a href="index.html" onclick="off()"  style="text-decoration: none;"><h3 style="color: #232323;">mhoo__ping</h3></a></div>
             <div class="column">...</div>
             <div class="column" onclick="on()"><h3>
-              <div class="flip-text">
+              <div class="flip-text" style="text-decoration: none; color: #232323;">
                 <!-- Each letter is a wrapper with two lines (original and duplicate) -->
                 <div class="letter-wrapper"><div class="letter-inner"><span>m</span><span>m</span></div></div>
                 <div class="letter-wrapper"><div class="letter-inner"><span>e</span><span>e</span></div></div>
